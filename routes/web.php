@@ -17,6 +17,9 @@ Route::post('/kehadiran/tambah', 'Sekolah\SekolahKehadiranController@store')->na
 Route::get('/kehadiran/tambah', 'Sekolah\SekolahKehadiranController@create')->name('sekolah.kehadiran.tambah');
 
 Route::get('/siswa', 'Sekolah\SekolahController@index')->name('siswa');
+Route::delete('/siswa/{id}/delete', 'Sekolah\SekolahController@destroy')->name('siswa.delete');
+Route::get('/siswa/{id}', 'Sekolah\SekolahController@edit')->name('siswa.edit');
+Route::patch('/siswa/{siswa}', 'Sekolah\SekolahController@update')->name('siswa.update');
 Route::post('/siswa/tambah', 'Sekolah\SekolahController@store')->name('siswa.input');
 Route::get('/siswa/tambah', 'Sekolah\SekolahController@create')->name('siswa.tambah');
 

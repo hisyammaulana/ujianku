@@ -27,6 +27,11 @@ class SekolahController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nisn' => 'required|numeric',
+            'no_ujian' => 'required|numeric'
+        ]);
+
         Siswa::create([
             'sekolah_id' => $request->sekolah_id,
             'name' => $request->name,
@@ -39,23 +44,35 @@ class SekolahController extends Controller
         return back()->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
-        //
+        $siswa = Siswa::find($id);
+        return view('sekolah.editsiswa', compact('siswa'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Siswa $siswa)
     {
-        //
+        $request->validate([
+            'nisn' => 'required|numeric',
+            'no_ujian' => 'required|numeric'
+        ]);
+
+        $siswa->update([
+            'sekolah_id' => $request->sekolah_id,
+            'name' => $request->name,
+            'nisn' => $request->nisn,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'no_ujian' => $request->no_ujian,
+            'alamat' => $request->alamat,
+        ]);
+
+        return back()->with(['warning' => 'Data Berhasil Perbaharui!']);
     }
 
-    public function destroy($id)
+    public function destroy(Siswa $id)
     {
-        //
+        $id->delete();
+
+        return back()->with(['danger' => 'Data Berhasil Dihapus!']);
     }
 }

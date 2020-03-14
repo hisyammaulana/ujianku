@@ -1,13 +1,13 @@
 @extends('layouts.master')
-@section('title', 'Tambah Siswa')
-@section('page-title', 'Halaman Tambah Siswa')
+@section('title', 'Edit Data Siswa')
+@section('page-title', 'Halaman Edit Data Siswa')
 @section('content')
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 col-lg-12">
-            @if ($message = Session::get('success'))
-            <div class="alert text-white bg-success" role="alert">
-                <div class="iq-alert-text">Data Berhasil Disimpam!</div>
+            @if ($message = Session::get('warning'))
+            <div class="alert text-white bg-warning" role="alert">
+                <div class="iq-alert-text">Data Berhasil Perbaharui!</div>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <i class="ri-close-line"></i>
                 </button>
@@ -16,7 +16,7 @@
             <div class="iq-card">
                 <div class="iq-card-header d-flex justify-content-between">
                     <div class="iq-header-title">
-                        <h4 class="card-title">Tambah Siswa</h4>
+                        <h4 class="card-title">Edit Data Siswa</h4>
                     </div>
                 </div>
                 <div class="iq-card-body">

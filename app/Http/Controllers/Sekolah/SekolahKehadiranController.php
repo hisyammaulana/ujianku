@@ -11,6 +11,10 @@ use DB;
 
 class SekolahKehadiranController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
@@ -45,11 +49,6 @@ class SekolahKehadiranController extends Controller
         ], $rule);
 
         return back()->with(['success' => 'Data Berhasil Disimpan!']);
-    }
-
-    public function show($id)
-    {
-        //
     }
 
     public function edit($id)

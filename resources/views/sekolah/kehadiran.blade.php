@@ -53,7 +53,6 @@
                                     <th>{{ $kehadiran->keterangan }}</th>
                                     <th>
                                         <a href="{{route('sekolah.kehadiran.edit', $kehadiran->id)}}" class="btn btn-warning mb-3"><i class="ri-edit-fill pr-0"></i></a>
-                                        {{-- <a href="{{route('sekolah.kehadiran.hapus', $kehadiran->id)}}" class="btn btn-danger mb-3"><i class="ri-delete-bin-6-line"></i></a> --}}
                                         <form action="{{route('sekolah.kehadiran.hapus', $kehadiran->id)}}" method="POST" >
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
