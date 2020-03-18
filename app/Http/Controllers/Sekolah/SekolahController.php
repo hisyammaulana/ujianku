@@ -16,8 +16,8 @@ class SekolahController extends Controller
 
     public function index()
     {
-        $siswas = Siswa::where('sekolah_id', Auth::user()->id)->get();
-        return view('sekolah.daftarsiswa', compact('siswas'));
+        // $siswas = Siswa::where('sekolah_id', Auth::user()->id)->get();
+        return view('sekolah.daftarsiswa');
     }
 
     public function create()

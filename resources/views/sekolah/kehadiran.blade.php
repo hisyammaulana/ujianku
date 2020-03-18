@@ -18,6 +18,7 @@
                     <div class="iq-card-header-toolbar d-flex align-items-center">
                         <div class="custom-control custom-switch custom-switch-text custom-control-inline">
                             <div class="custom-switch-inner">
+                            </br>
                                 <a href="{{route('sekolah.kehadiran.tambah')}}" type="button" class="btn btn-success mb-3">Tambah Absensi</a>
                             </div>
                         </div>
@@ -37,7 +38,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if (count($kehadirans) === 0)
+                                {{-- @if (count($kehadirans) === 0)
                                     <tr>
                                         <td style="text-align: center;" colspan="6">Tidak ada siswa yang tidak berangkat</td>
                                     </tr>
@@ -61,7 +62,7 @@
                                     </th>
                                 </tr>
                                 @endforeach
-                                @endif
+                                @endif --}}
                         </table>
                     </div>
                 </div>

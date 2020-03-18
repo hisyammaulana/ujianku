@@ -22,33 +22,33 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
+                                    <th>Rayon</th>
+                                    <th>Kode Sekolah</th>
                                     <th>Nama Sekolah</th>
-                                    <th>Email</th>
-                                    <th>Username</th>
-                                    <th>Aksi</th>
+                                    <th>NPSN</th>
+                                    <th>Status Sekolah</th>
+                                    <th>Kurikulum</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @if (count($sekolahs) === 0)
-                                <tr>
-                                    <td colspan="5" style="text-align: center;">Tidak ada data siswa</td>
-                                </tr>
-                                @elseif (count($sekolahs) > 0) @php($no = 1) @foreach ($sekolahs as $sekolah)
-                                <tr>
-                                    <td>{{ $no++ }}</td>
-                                    <td>{{ $sekolah->name }}</td>
-                                    <td>{{ $sekolah->email }}</td>
-                                    <td>{{ $sekolah->username }}</td>
-                                    <td>
-                                        <a href="{{route('cabang.sekolah.edit', $sekolah->id)}}" class="btn btn-warning mb-3"><i class="ri-edit-fill pr-0"></i></a>
-
-                                        <form action="{{route('cabang.sekolah.delete', $sekolah->id)}}" method="POST">
-                                            {{ csrf_field() }} {{ method_field('DELETE') }}
-                                            <button class="btn btn-danger mb-3"><i class="ri-delete-bin-6-line"></i></button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                @endforeach @endif
+                                    <tr>
+                                        <td colspan="7" >Data tidak ditemukan</td>
+                                    </tr>
+                                @elseif (count($sekolahs) > 0)
+                                    @php($no = 1)
+                                    @foreach ($sekolahs as $sekolah)
+                                    <tr>
+                                        <td>{{ $no++ }}</td>
+                                        <td>{{ $sekolah->nama_rayon }}</td>
+                                        <td>{{ $sekolah->kode_sekolah }}</td>
+                                        <td>{{ $sekolah->name }}</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    @endforeach
+                                @endif
                             </tbody>
                         </table>
                     </div>

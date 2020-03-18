@@ -27,7 +27,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if (count($siswa) === 0)
+                                {{-- @if (count($siswa) === 0)
                                 <tr>
                                     <td colspan="6" style="text-align: center;">Tidak ada data siswa</td>
                                 </tr>
@@ -40,7 +40,7 @@
                                     <td>{{ $siswas->nama_sekolah }}</td>
                                     <td>{{ $siswas->alamat }}</td>
                                 </tr>
-                                @endforeach @endif
+                                @endforeach @endif --}}
                             </tbody>
                         </table>
                     </div>

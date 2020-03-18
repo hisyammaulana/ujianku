@@ -20,20 +20,21 @@
                     </div>
                 </div>
                 <div class="iq-card-body">
-                    <form method="POST" action="{{ route('siswa.input') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('siswa.update', $siswa->id) }}" enctype="multipart/form-data">
                         @csrf
+                        {{ method_field('PATCH') }}
                         <input type="hidden" name="sekolah_id" value="{{Auth::user()->id}}">
                         <div class="form-group">
                             <label for="email">NISN</label>
-                            <input type="text" class="form-control" name="nisn" autofocus required>
+                            <input type="text" class="form-control" name="nisn" value="{{$siswa->nisn}}" autofocus required>
                         </div>
                         <div class="form-group">
                             <label for="email">No. Ujian</label>
-                            <input type="text" class="form-control" name="no_ujian">
+                            <input type="text" class="form-control" name="no_ujian" value="{{$siswa->no_ujian}}">
                         </div>
                         <div class="form-group">
                             <label for="email">Nama Siswa</label>
-                            <input type="text" class="form-control" name="name">
+                            <input type="text" class="form-control" name="name" value="{{$siswa->name}}">
                         </div>
                         <div class="form-group">
                             <label>Jenis Kelamin</label>
@@ -45,9 +46,9 @@
                         </div>
                         <div class="form-group">
                             <label for="alamat">Alamat</label>
-                            <textarea name="alamat" type="text" class="form-control"></textarea>
+                            <textarea name="alamat" type="text" class="form-control">{{$siswa->alamat}}</textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
+                        <button type="submit" class="btn btn-primary">Perbaharui</button>
                     </form>
                 </div>
             </div>

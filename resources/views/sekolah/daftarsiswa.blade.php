@@ -24,7 +24,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if (count($siswas) === 0)
+                                {{-- @if (count($siswas) === 0)
                                 <tr>
                                     <td colspan="7" style="text-align: center;">Tidak ada data siswa</td>
                                 </tr>
@@ -37,14 +37,14 @@
                                     <td>{{ $siswa->jenis_kelamin }}</td>
                                     <td>{{ $siswa->alamat }}</td>
                                     <td>
-                                        <a href="{{route('siswa.edit', $siswa->id)}}" class="btn btn-warning mb-3"><i class="ri-edit-fill pr-0"></i></a> {{-- <a href="{{route()}}" class="btn btn-danger mb-3"><i class="ri-delete-bin-6-line"></i></a> --}}
+                                        <a href="{{route('siswa.edit', $siswa->id)}}" class="btn btn-warning mb-3"><i class="ri-edit-fill pr-0"></i></a>
                                         <form action="{{route('siswa.delete', $siswa->id)}}" method="POST">
                                             {{ csrf_field() }} {{ method_field('DELETE') }}
                                             <button class="btn btn-danger mb-3"><i class="ri-delete-bin-6-line"></i></button>
                                         </form>
                                     </td>
                                 </tr>
-                                @endforeach @endif
+                                @endforeach @endif --}}
                         </table>
                     </div>
                 </div>

@@ -10,10 +10,18 @@ use Auth;
 
 class CabangDinasController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 
     public function index()
     {
-        $sekolahs = User::where('user_id', Auth::user()->id)->get();
+        $sekolahs = DB::table('users')
+                    ->join('rayons', 'rayons.kd_rayon', '=', 'users.kode_rayon')
+                    ->where('users.user_id', Auth::user()->id)
+                    ->select('users.*', 'rayons.name as nama_rayon')->get();
         return view('cabang.cabangsekolah', compact('sekolahs'));
     }
 
@@ -70,13 +78,13 @@ class CabangDinasController extends Controller
 
     public function getSiswa()
     {
-        $siswa = DB::table('siswas')
-                  ->join('users', 'users.id', '=', 'siswas.sekolah_id')
-                  ->where('users.user_id', Auth::user()->id)
-                  ->select('users.name as nama_sekolah', 'siswas.*')
-                  ->get();
+        // $siswa = DB::table('siswas')
+        //           ->join('users', 'users.id', '=', 'siswas.sekolah_id')
+        //           ->where('users.user_id', Auth::user()->id)
+        //           ->select('users.name as nama_sekolah', 'siswas.*')
+        //           ->get();
 
-        return view('cabang.cabangsiswa', compact('siswa'));
+        return view('cabang.cabangsiswa');
     }
 
     public function getKehadiran()

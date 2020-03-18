@@ -12,7 +12,7 @@ class User extends Authenticatable
 
     protected $table = 'users';
     protected $fillable = [
-        'name', 'email', 'password', 'user_id', 'username', 'role_id',
+        'kode_prov', 'kode_rayon', 'kode_sekolah', 'role_id', 'name', 'password', 'user_id',
     ];
 
     /**

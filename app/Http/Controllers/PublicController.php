@@ -14,12 +14,12 @@ class PublicController extends Controller
 
     public function landing()
     {
-        $datas = DB::table('kehadirans')
-                ->join('users', 'users.id', '=', 'kehadirans.sekolah_id')
-                ->whereDate('kehadirans.created_at', date('Y-m-d'))
-                ->select('kehadirans.*', 'users.name as nama_sekolah')
-                ->get();
+        // $datas = DB::table('kehadirans')
+        //         ->join('users', 'users.id', '=', 'kehadirans.sekolah_id')
+        //         ->whereDate('kehadirans.created_at', date('Y-m-d'))
+        //         ->select('kehadirans.*', 'users.name as nama_sekolah')
+        //         ->get();
 
-        return view('landing', compact('datas'));
+        return view('landing');
     }
 }

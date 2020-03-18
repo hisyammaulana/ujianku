@@ -12,45 +12,25 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([[
-            'name' => 'Developer',
-            'user_id' => 0,
-            'username' => 'dev_user',
-            'email' => 'dev@mail.com',
-            'password' => bcrypt('1234567890'),
-            'role_id' => 1,
-        ],
-        [   'name' => 'Admin Provinsi',
-            'user_id' => 1,
-            'username' => 'admin',
-            'email' => 'admin@mail.com',
-            'password' => bcrypt('1234567890'),
-            'role_id' => 2,
-        ],
-        [
-            'name' => 'Cabang Dinas',
-            'user_id' => 2,
-            'username' => 'cabang_dinas',
-            'email' => 'cabang@mail.com',
-            'password' => bcrypt('1234567890'),
-            'role_id' => 3,
-        ],
-        [
-            'name' => 'Sekolah 1 Tegal',
-            'user_id' => 3,
-            'username' => 'sekolah1',
-            'email' => 'sekolah1@mail.com',
-            'password' => bcrypt('1234567890'),
-            'role_id' => 4,
-        ],
-        [
-            'name' => 'Sekolah 2 Tegal',
-            'user_id' => 3,
-            'username' => 'sekolah2',
-            'email' => 'sekolah2@mail.com',
-            'password' => bcrypt('1234567890'),
-            'role_id' => 4,
-        ]
+        DB::table('users')->insert([
+            [
+                'user_id' => 0,
+                'kode_prov' => '',
+                'kode_rayon' => '',
+                'kode_sekolah' => 'developer',
+                'name' => 'Developer',
+                'password' => bcrypt('developer'),
+                'role_id' => 1
+            ],
+            [
+                'user_id' => 0,
+                'kode_prov' => '03',
+                'kode_rayon' => '',
+                'kode_sekolah' => 'adminprov',
+                'name' => 'Admin Provinsi',
+                'password' => bcrypt('adminprov'),
+                'role_id' => 2
+            ]
         ]);
     }
 }

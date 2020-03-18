@@ -36,7 +36,7 @@
                                     <h5 class="mb-0 text-white line-height">{{ Auth::user()->name }}</h5>
                                     <span class="text-white font-size-12">Online</span>
                                  </div>
-                                 <a href="profile.html" class="iq-sub-card iq-bg-primary-hover">
+                                 <a href="#" class="iq-sub-card iq-bg-primary-hover">
                                     <div class="media align-items-center">
                                        <div class="rounded iq-card-icon iq-bg-primary">
                                           <i class="ri-file-user-line"></i>
