@@ -17,7 +17,7 @@ class CreateRayonsTable extends Migration
             $table->bigIncrements('id');
             $table->char('kd_prov', 3)->nullable();
             $table->char('kd_rayon', 3);
-            $table->string('name');
+            $table->string('nama_rayon');
             $table->timestamps();
         });
     }

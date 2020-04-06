@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             CabangDinasTableSeeder::class,
             RayonTableSeeder::class,
+            PelajaranTableSeeder::class,
         ]);
     }
 }

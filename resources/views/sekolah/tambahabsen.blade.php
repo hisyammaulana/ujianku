@@ -23,37 +23,18 @@
                     <form action="{{route('sekolah.kehadiran.input')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="sekolah_id" value="{{Auth::user()->id}}">
+                        <input type="hidden" name="kode_rayon" value="{{Auth::user()->kode_rayon}}">
                         <div class="form-group">
-                            <label for="no_ujian">No. Ujian Nasional</label>
-                            <input type="text" class="form-control @error('no_ujian') is-invalid @enderror" id="no_ujian" name="no_ujian" autofocus>
-                            @error('no_ujian')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <label for="name">Nama Siswa</label>
+                            <select name="siswa_id" id="name" class="form-control select2"></select>
                         </div>
                         <div class="form-group">
-                            <label for="no_ujian">Nama Siswa</label>
-                            <input type="text" class="form-control" id="name" name="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="no_ujian">Mata Pelajaran</label>
-                            <select name="mata_pelajaran" class="form-control form-control-sm mb-3">
+                            <label for="mata_pelajaran">Mata Pelajaran</label>
+                            <select name="pelajaran" class="form-control form-control-sm mb-3">
                                 <option selected disabled>-- Pilih Palajaran --</option>
-                                <option value="BAHASA INDONESIA">BAHASA INDONESIA</option>
-                                <option value="MATEMATIKA">MATEMATIKA</option>
-                                <option value="BAHASA INGGRIS">BAHASA INGGRIS</option>
-                                <option value="KEJURUAN">KEJURUAN</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="no_ujian">Hari Ujian</label>
-                            <select name="hari" class="form-control form-control-sm mb-3">
-                                <option selected disabled>-- Pilih Hari --</option>
-                                <option value="PERTAMA">PERTAMA</option>
-                                <option value="KEDUA">KEDUA</option>
-                                <option value="KETIGA">KETIGA</option>
-                                <option value="KEEMPAT">KEEMPAT</option>
+                                @foreach ($pelajarans as $pelajaran)
+                                <option value="{{ $pelajaran->name }}">{{ $pelajaran->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">

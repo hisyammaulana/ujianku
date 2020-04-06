@@ -347,6 +347,7 @@ Index Of Script
             nextArrow: '<a href="#" class="ri-arrow-left-s-line left"></a>',
             prevArrow: '<a href="#" class="ri-arrow-right-s-line right"></a>',
         });
+
         jQuery('#product-additional-slider').slick({
             centerMode: true,
             centerPadding: '60px',
@@ -405,8 +406,8 @@ Index Of Script
             centerPadding: '60px',
             slidesToShow: 3,
             slidesToScroll: 1,
-            autoplay:true,
             arrows: false,
+            autoplay:true,
             focusOnSelect: true,
             responsive: [{
                 breakpoint: 992,
@@ -428,6 +429,7 @@ Index Of Script
             // nextArrow: '<a href="#" class="ri-arrow-left-s-line left"></a>',
             // prevArrow: '<a href="#" class="ri-arrow-right-s-line right"></a>',
         });
+
 
         /*---------------------------------------------------------------------
         Progress Bar

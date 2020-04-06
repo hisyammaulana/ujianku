@@ -29,14 +29,39 @@
 <!-- Custom JavaScript -->
 <script src="{{asset('template/js/custom.js')}}"></script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#name').select2({
+        minimumInputLength: 1,
+        ajax: {
+            url: '{{route('siswa.search')}}',
+            dataType: 'json',
+        },
+    });
+
+    $('#no_peserta').change(function(){
+    var value = $(this).val();
+
+    // Set selected
+    $('#name').val(value);
+    $('#name').select2().trigger('change');
+
+  });
+});
+  </script>
 
 <script>
     $(document).ready(function() {
-    $('#example').DataTable( {
-        "scrollY": 200,
-        "scrollX": true
+        $('#example').DataTable();
     } );
+
+    $(document).ready(function() {
+        $('#example1').DataTable();
     } );
 </script>

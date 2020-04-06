@@ -27,7 +27,23 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo;
+
+    // protected function redirectTo()
+    // {
+    //     if (Auth::user()->role === '1') {
+    //         return redirect('/dev/home');
+    //     }elseif(Auth::user()->role === '2'){
+    //         return redirect('/admin/home');
+    //     }elseif(Auth::user()->role === '3'){
+    //         return redirect('/cab/beranda');
+    //     }elseif(Auth::user()->role === '4'){
+    //         return redirect('/sekolah/beranda');
+    //     }else {
+    //         return redirect('/notfound');
+    //     }
+    // }
+
 
     /**
      * Create a new controller instance.
@@ -42,16 +58,16 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $this->validate($request, [
-            'kode_sekolah' => 'required',
+            'username' => 'required',
             'password' => 'required',
         ]);
 
-        $kode_sekolah = $request->get('kode_sekolah');
+        $username = $request->get('username');
         $password = $request->get('password');
 
-        $login_type = filter_var($kode_sekolah, FILTER_VALIDATE_EMAIL) ? 'email' : 'kode_sekolah';
+        $login_type = filter_var($username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
-        if (Auth::attempt([$login_type => $kode_sekolah, 'password' => $password])) {
+        if (Auth::attempt([$login_type => $username, 'password' => $password])) {
             return redirect()->intended($this->redirectPath());
         }
 

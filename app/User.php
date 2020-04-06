@@ -12,7 +12,9 @@ class User extends Authenticatable
 
     protected $table = 'users';
     protected $fillable = [
-        'kode_prov', 'kode_rayon', 'kode_sekolah', 'role_id', 'name', 'password', 'user_id',
+        'kode_prov', 'kode_rayon', 'kode_sekolah',
+        'role_id', 'name', 'password', 'user_id',
+        'username', 'jenis',
     ];
 
     /**
@@ -53,6 +55,11 @@ class User extends Authenticatable
     	return $this->hasMany('App\Siswa');
     }
 
+    public function rayon()
+    {
+        return $this->belongsTo('App\Rayons');
+    }
+
     public function kehadiran(){
     	return $this->hasMany('App\Kehadiran');
     }
@@ -61,11 +68,7 @@ class User extends Authenticatable
     {
         return (strtolower($role)==strtolower($this->have_role->nama)) ? true : false;
     }
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
+
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];

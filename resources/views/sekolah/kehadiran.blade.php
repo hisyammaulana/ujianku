@@ -32,15 +32,16 @@
                                     <th>No</th>
                                     <th>Nomor Peserta</th>
                                     <th>Nama Siswa</th>
-                                    <th>Asal Sekolah</th>
+                                    <th>Pelajaran</th>
+                                    <th>Tanggal</th>
                                     <th>Keterangan</th>
-                                    <th>Aksi</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{-- @if (count($kehadirans) === 0)
+                                @if (count($kehadirans) === 0)
                                     <tr>
-                                        <td style="text-align: center;" colspan="6">Tidak ada siswa yang tidak berangkat</td>
+                                        <td style="text-align: center;" colspan="7">Tidak ada siswa yang tidak berangkat</td>
                                     </tr>
                                 @elseif (count($kehadirans) > 0)
 
@@ -50,11 +51,12 @@
                                     <th>{{ $no++ }}</th>
                                     <th>{{ $kehadiran->no_peserta }}</th>
                                     <th>{{ $kehadiran->name }}</th>
-                                    <th>{{ $kehadiran->nama_sekolah }}</th>
+                                    <th>{{ $kehadiran->pelajaran }}</th>
+                                    <th>{{ Carbon\Carbon::parse($kehadiran->created_at)->format('d-m-Y') }}</th>
                                     <th>{{ $kehadiran->keterangan }}</th>
                                     <th>
-                                        <a href="{{route('sekolah.kehadiran.edit', $kehadiran->id)}}" class="btn btn-warning mb-3"><i class="ri-edit-fill pr-0"></i></a>
-                                        <form action="{{route('sekolah.kehadiran.hapus', $kehadiran->id)}}" method="POST" >
+                                        <a href="{{route('sekolah.kehadiran.edit', $kehadiran->kehadiran_id)}}" class="btn btn-warning mb-3"><i class="ri-edit-fill pr-0"></i></a>
+                                        <form action="{{route('sekolah.kehadiran.hapus', $kehadiran->kehadiran_id)}}" method="POST" >
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button class="btn btn-danger mb-3" ><i class="ri-delete-bin-6-line"></i></button>
@@ -62,7 +64,7 @@
                                     </th>
                                 </tr>
                                 @endforeach
-                                @endif --}}
+                                @endif
                         </table>
                     </div>
                 </div>

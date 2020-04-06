@@ -23,13 +23,27 @@
                     <form method="POST" action="{{ route('siswa.input') }}" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="sekolah_id" value="{{Auth::user()->id}}">
+                        <input type="hidden" name="kode_rayon" value="{{Auth::user()->kode_rayon}}">
+                        <input type="hidden" name="kode_sekolah" value="{{Auth::user()->kode_sekolah}}">
                         <div class="form-group">
-                            <label for="email">NISN</label>
-                            <input type="text" class="form-control" name="nisn" autofocus required>
+                            <label for="email">No. Studi</label>
+                            <input type="text" class="form-control" name="kode_studi" autofocus required>
                         </div>
                         <div class="form-group">
-                            <label for="email">No. Ujian</label>
-                            <input type="text" class="form-control" name="no_ujian">
+                            <label for="email">No. Peserta Sekolah</label>
+                            <input type="text" class="form-control" name="kode_peserta_sekolah">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">No. Peserta</label>
+                            <input type="text" class="form-control" name="no_peserta">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">NISN</label>
+                            <input type="text" class="form-control" name="nisn">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">No. Induk</label>
+                            <input type="text" class="form-control" name="no_induk">
                         </div>
                         <div class="form-group">
                             <label for="email">Nama Siswa</label>
@@ -39,13 +53,13 @@
                             <label>Jenis Kelamin</label>
                             <select name="jenis_kelamin" class="form-control form-control-sm mb-3">
                                 <option selected disabled>-- Pilih Jenis Kelamin --</option>
-                                <option value="Laki-Laki">Laki-Laki</option>
-                                <option value="Perempuan">Perempuan</option>
+                                <option value="L">Laki-Laki</option>
+                                <option value="P">Perempuan</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="alamat">Alamat</label>
-                            <textarea name="alamat" type="text" class="form-control"></textarea>
+                            <label for="email">Nama Orang Tua</label>
+                            <input type="text" class="form-control" name="nama_ortu">
                         </div>
                         <button type="submit" class="btn btn-primary">Tambah</button>
                     </form>

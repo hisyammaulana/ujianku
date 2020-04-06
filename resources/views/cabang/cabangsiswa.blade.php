@@ -15,32 +15,34 @@
                 </div>
                 <div class="iq-card-body">
                     <div class="table-responsive">
-                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <table id="example" class="display responsive nowrap" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>No.</th>
                                     <th>NISN</th>
                                     <th>Nama Siswa</th>
-                                    <th>Jenis Kelamin</th>
+                                    <th>No. Ujian</th>
                                     <th>Asal Sekolah</th>
-                                    <th>Alamat</th>
+                                    <th>Nama Orang Tua</th>
+                                    <th>Asal Rayon</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{-- @if (count($siswa) === 0)
+                                @if (count($siswas) === 0)
                                 <tr>
-                                    <td colspan="6" style="text-align: center;">Tidak ada data siswa</td>
+                                    <td colspan="7" style="text-align: center;">Tidak ada data siswa</td>
                                 </tr>
-                                @elseif (count($siswa) > 0) @php($no = 1) @foreach ($siswa as $siswas)
+                                @elseif (count($siswas) > 0) @php($no = 1) @foreach ($siswas as $siswa)
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{ $siswas->nisn }}</td>
-                                    <td>{{ $siswas->name }}</td>
-                                    <td>{{ $siswas->jenis_kelamin }}</td>
-                                    <td>{{ $siswas->nama_sekolah }}</td>
-                                    <td>{{ $siswas->alamat }}</td>
+                                    <td>{{ $siswa->nisn }}</td>
+                                    <td>{{ $siswa->name }}</td>
+                                    <td>{{ $siswa->no_peserta }}</td>
+                                    <td>{{ $siswa->nama_sekolah }}</td>
+                                    <td>{{ $siswa->nama_ortu }}</td>
+                                    <td>{{ $siswa->nama_rayon }}</td>
                                 </tr>
-                                @endforeach @endif --}}
+                                @endforeach @endif
                             </tbody>
                         </table>
                     </div>

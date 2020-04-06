@@ -19,7 +19,8 @@ class UsersTableSeeder extends Seeder
                 'kode_rayon' => '',
                 'kode_sekolah' => 'developer',
                 'name' => 'Developer',
-                'password' => bcrypt('developer'),
+                'username' => 'dev123',
+                'password' => bcrypt('dev123'),
                 'role_id' => 1
             ],
             [
@@ -28,7 +29,8 @@ class UsersTableSeeder extends Seeder
                 'kode_rayon' => '',
                 'kode_sekolah' => 'adminprov',
                 'name' => 'Admin Provinsi',
-                'password' => bcrypt('adminprov'),
+                'username' => 'adminjateng',
+                'password' => bcrypt('adminjateng'),
                 'role_id' => 2
             ]
         ]);

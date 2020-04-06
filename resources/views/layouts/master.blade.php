@@ -1,7 +1,9 @@
 
 <!doctype html>
 <html lang="en">
+
    @include('layouts.partials._head')
+
    <body>
 
       <div id="loading">
@@ -21,24 +23,18 @@
          </div>
       </div>
 
-
       <div class="wrapper">
-
 
          @include('layouts.partials._sidebar')
 
-
          @include('layouts.partials._navbar')
-
 
          <div id="content-page" class="content-page">
             @yield('content')
          </div>
       </div>
 
-
       @include('layouts.partials._footer')
-
 
       @include('layouts.partials._script')
    </body>

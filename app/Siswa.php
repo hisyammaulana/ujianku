@@ -11,4 +11,9 @@ class Siswa extends Model
     public function sekolah(){
         return $this->belongsTo('App\User');
     }
+
+    public function rayon()
+    {
+        return $this->belongsTo('App\Rayons');
+    }
 }

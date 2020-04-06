@@ -56,7 +56,7 @@
                                     <h3 class="box-title m-b-20">Masuk Administrasi</h3>
                                     <div class="form-group ">
                                         <div class="col-xs-12">
-                                            <input class="form-control @error('kode_sekolah') is-invalid @enderror" type="text" name="kode_sekolah" required autofocus placeholder="Username"> @error('kode_sekolah')
+                                            <input class="form-control @error('username') is-invalid @enderror" type="text" name="username" required autofocus placeholder="Username"> @error('username')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span> @enderror

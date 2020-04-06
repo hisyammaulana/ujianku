@@ -24,29 +24,43 @@
                         @csrf
                         {{ method_field('PATCH') }}
                         <input type="hidden" name="sekolah_id" value="{{Auth::user()->id}}">
+                        <input type="hidden" name="kode_rayon" value="{{Auth::user()->kode_rayon}}">
+                        <input type="hidden" name="kode_sekolah" value="{{Auth::user()->kode_sekolah}}">
                         <div class="form-group">
-                            <label for="email">NISN</label>
-                            <input type="text" class="form-control" name="nisn" value="{{$siswa->nisn}}" autofocus required>
+                            <label for="email">No. Studi</label>
+                            <input type="text" class="form-control" name="kode_studi" value="{{ $siswa->kode_studi }}" autofocus required>
                         </div>
                         <div class="form-group">
-                            <label for="email">No. Ujian</label>
-                            <input type="text" class="form-control" name="no_ujian" value="{{$siswa->no_ujian}}">
+                            <label for="email">No. Peserta Sekolah</label>
+                            <input type="text" class="form-control" name="kode_peserta_sekolah" value="{{ $siswa->kode_peserta_sekolah }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">No. Peserta</label>
+                            <input type="text" class="form-control" name="no_peserta" value="{{ $siswa->no_peserta }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">NISN</label>
+                            <input type="text" class="form-control" name="nisn" value="{{ $siswa->nisn }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">No. Induk</label>
+                            <input type="text" class="form-control" name="no_induk" value="{{ $siswa->no_induk }}">
                         </div>
                         <div class="form-group">
                             <label for="email">Nama Siswa</label>
-                            <input type="text" class="form-control" name="name" value="{{$siswa->name}}">
+                            <input type="text" class="form-control" name="name" value="{{ $siswa->name }}">
                         </div>
                         <div class="form-group">
                             <label>Jenis Kelamin</label>
                             <select name="jenis_kelamin" class="form-control form-control-sm mb-3">
                                 <option selected disabled>-- Pilih Jenis Kelamin --</option>
-                                <option value="Laki-Laki">Laki-Laki</option>
-                                <option value="Perempuan">Perempuan</option>
+                                <option {{old('jenis_kelamin',$siswa->jenis_kelamin)=="L"? 'selected':''}} value="L">Laki-Laki</option>
+                                <option {{old('jenis_kelamin',$siswa->jenis_kelamin)=="P"? 'selected':''}} value="P">Perempuan</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="alamat">Alamat</label>
-                            <textarea name="alamat" type="text" class="form-control">{{$siswa->alamat}}</textarea>
+                            <label for="email">Nama Orang Tua</label>
+                            <input type="text" class="form-control" name="nama_ortu" value="{{ $siswa->nama_ortu }}">
                         </div>
                         <button type="submit" class="btn btn-primary">Perbaharui</button>
                     </form>

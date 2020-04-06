@@ -16,14 +16,14 @@ class CreateKehadiransTable extends Migration
         Schema::create('kehadirans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('sekolah_id')->unsigned();
-            $table->string('name');
-            $table->string('hari');
+            $table->char('kode_rayon', 3);
+            $table->bigInteger('siswa_id')->unsigned();
             $table->string('pelajaran');
-            $table->string('no_peserta');
             $table->string('keterangan');
             $table->timestamps();
 
             $table->foreign('sekolah_id')->references('id')->on('users')->onDelete('CASCADE');
+            $table->foreign('siswa_id')->references('id')->on('siswas')->onDelete('CASCADE');
         });
     }
 

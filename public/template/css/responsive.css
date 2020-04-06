@@ -11,6 +11,7 @@ NOTE: This file contains the styling for responsive Template.
 	.email-form .select2-container { width: 100% !important; }
 	.sign-in-page {height: 100%;}
 	.sign-in-detail{height: 100%;}
+	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li a { padding: 28px 30px 28px 0; }
 }
 
 @media(max-width:1399px) {
@@ -29,9 +30,9 @@ NOTE: This file contains the styling for responsive Template.
 	.iq-page-menu-horizontal .iq-footer { margin-left: 0; }
 	.iq-page-menu-horizontal .iq-sidebar-logo { padding-top: 0; }
 	.iq-page-menu-horizontal .iq-top-navbar .iq-sidebar-logo .top-logo { display: block; }
-	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li ul { display: block; position: absolute; top: 100%; padding: 0; min-width: 200px; background: #202442; z-index: 9; box-shadow: 0px 0px 12px 0px rgba(55, 73, 72, 0.06); transition: all 0.45s ease 0s; -webkit-transition: all 0.45s ease 0s; -moz-transition: all 0.45s ease 0s; -o-transition: all 0.45s ease 0s; transform: scale(1, 0); -webkit-transform: scale(1, 0); -moz-transform: scale(1, 0); -o-transform: scale(1, 0); -webkit-transform-origin: 0 0 0; -moz-transform-origin: 0 0 0; -o-transform-origin: 0 0 0; transform-origin: 0 0 0; }
+	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li ul { display: block; position: absolute; top: 100%; padding: 0; min-width: 200px; background: #f7f8ff; z-index: 9; box-shadow: 0px 0px 12px 0px rgba(55, 73, 72, 0.06); transition: all 0.45s ease 0s; -webkit-transition: all 0.45s ease 0s; -moz-transition: all 0.45s ease 0s; -o-transition: all 0.45s ease 0s; transform: scale(1, 0); -webkit-transform: scale(1, 0); -moz-transform: scale(1, 0); -o-transform: scale(1, 0); -webkit-transform-origin: 0 0 0; -moz-transform-origin: 0 0 0; -o-transform-origin: 0 0 0; transform-origin: 0 0 0; }
 	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li ul #sidebar-scrollbar { height: 50vh; }
-	.iq-menu-horizontal .iq-sidebar-menu li.menu-open>a, .iq-menu-horizontal .iq-sidebar-menu li:hover >a { color: #0084ff; background: transparent; }
+	.iq-menu-horizontal .iq-sidebar-menu li.menu-open>a, .iq-menu-horizontal .iq-sidebar-menu li:hover >a {  background: transparent; }
 	.iq-menu-horizontal .iq-sidebar-menu li:hover > .iq-submenu { display: block; transition: all 0.45s ease 0s; -webkit-transition: all 0.45s ease 0s; -moz-transition: all 0.45s ease 0s; -o-transition: all 0.45s ease 0s; transform: scale(1, 1); -webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); -o-transform: scale(1, 1); }
 	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li.menu-open .iq-arrow-right, .iq-menu-horizontal .iq-sidebar-menu .iq-menu li:hover .iq-arrow-right { transform: rotate(90deg); }
 	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li li .iq-arrow-right, .iq-menu-horizontal .iq-sidebar-menu .iq-menu li:hover li .iq-arrow-right { transform: rotate(0deg); }
@@ -39,7 +40,7 @@ NOTE: This file contains the styling for responsive Template.
 	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li ul li a { padding: 12px 15px; }
 	.iq-menu-horizontal .iq-sidebar-menu li > .iq-submenu.iq-submenu-data { opacity: 0; visibility: hidden; left: 100%; top: 0; transition: transform 0.2s; transform: translateX(-50px); }
 	.iq-menu-horizontal .iq-sidebar-menu li:hover > .iq-submenu.iq-submenu-data { opacity: 1; visibility: visible; transition: all 0.45s ease 0s; transform: translateX(0); }
-	/*.iq-menu-horizontal .iq-sidebar-menu .iq-menu li a:hover, .iq-menu-horizontal .iq-sidebar-menu .iq-menu li.active>a, .iq-menu-horizontal .iq-sidebar-menu .iq-menu li.menu-open>a { background: transparent; }*/
+	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li a:hover, .iq-menu-horizontal .iq-sidebar-menu .iq-menu li.active>a, .iq-menu-horizontal .iq-sidebar-menu .iq-menu li.menu-open>a { background: transparent; box-shadow: none; }
 	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li>a::before { display: none; }
 
 	/*---------------------------------------------------------------------
@@ -56,7 +57,7 @@ NOTE: This file contains the styling for responsive Template.
 	body.icon-with-text .iq-sidebar-menu .iq-menu > li > a { display: flex; flex-direction: column; }
 	body.icon-with-text .iq-sidebar-menu .iq-menu li > a > i { margin: 0 0 10px }
 	body.icon-with-text .iq-sidebar-menu .iq-menu li li > a > i {margin: 0 10px 0 0;}
-	body.icon-with-text .iq-sidebar-menu .iq-menu li ul { background: #303663; position: absolute; display: block; top: 0; left: 100%; padding: 0; min-width: 200px; opacity: 0; visibility: hidden; transition: transform 0.2s; transform: translateX(50px); }
+	body.icon-with-text .iq-sidebar-menu .iq-menu li ul { background: #2b74ad; position: absolute; display: block; top: 0; left: 100%; padding: 0; min-width: 200px; opacity: 0; visibility: hidden; transition: transform 0.2s; transform: translateX(50px); }
 	body.icon-with-text .iq-sidebar-menu .iq-menu li:hover > ul { opacity: 1; visibility: visible; transition: all 0.45s ease 0s; transform: translateX(0); }
 	body.icon-with-text .iq-sidebar.sidebar-dark .iq-sidebar-menu .iq-menu li ul li a { padding-left: 15px; }
 	body.icon-with-text .iq-sidebar-menu .iq-menu li a { padding: 15px; }
@@ -71,7 +72,7 @@ NOTE: This file contains the styling for responsive Template.
 	-----------------------------------------------------------------------*/
 	body.icon-with-text .iq-sidebar-logo {padding: 0;}
 	body.icon-with-text .iq-sidebar-logo a {display: block;text-align: center;}
-	.two-sidebar .iq-sidebar-small { z-index: 1030; position: fixed; width: 60px; height: 100vh; top: 0; left: 0; padding: 10px 0; display: flex; flex-direction: column; justify-content: space-between; text-align: center; background: #1e2348; }
+	.two-sidebar .iq-sidebar-small { z-index: 1030; position: fixed; width: 60px; height: 100vh; top: 0; left: 0; padding: 10px 0; display: flex; flex-direction: column; justify-content: space-between; text-align: center; background: #fff; }
 	.two-sidebar .iq-sidebar { margin-left: 60px; }
 	.two-sidebar .content-page { margin-left: 320px; }
 	.two-sidebar .iq-sidebar-logo { width: 320px; }
@@ -93,10 +94,10 @@ NOTE: This file contains the styling for responsive Template.
 	.top-tab-horizontal .iq-sidebar-logo { padding: 0; }
 	.top-tab-horizontal .content-page { padding: 80px 15px 0; width: 100%; margin-left: 0; }
 	.top-tab-horizontal .iq-footer { margin-left: 0; }
-	.tab-menu-horizontal { background: #242a57; margin-top: 75px; transition: all 0.45s ease 0s; position: fixed; top: 0; left: 0; right: 0; z-index: 9; }
+	.tab-menu-horizontal { background: #1c67a2; margin-top: 75px; transition: all 0.45s ease 0s; position: fixed; top: 0; left: 0; right: 0; z-index: 9; }
 	body.top-tab-horizontal .tab-menu-horizontal.menu-down { top: -60px; transition: all 0.45s ease 0s; opacity: 0; }
 	body.top-tab-horizontal .tab-menu-horizontal.menu-up { top: 0; opacity: 1; transition: all 0.45s ease 0s; }
-	.iq-menu-horizontal-tab .iq-sidebar-menu .iq-menu li > ul.iq-submenu { display: block; position: absolute; top: 150%; background: #202442; min-width: 260px; z-index: 9; padding: 0; opacity: 0; visibility: hidden; box-shadow: 0px 0px 12px 0px rgba(55, 73, 72, 0.06); transition: all 0.45s ease 0s; }
+	.iq-menu-horizontal-tab .iq-sidebar-menu .iq-menu li > ul.iq-submenu { display: block; position: absolute; top: 150%; background: #ffffff; min-width: 260px; z-index: 9; padding: 0; opacity: 0; visibility: hidden; box-shadow: 0px 0px 12px 0px rgba(55, 73, 72, 0.06); transition: all 0.45s ease 0s; }
 	.iq-menu-horizontal-tab .iq-sidebar-menu .iq-menu > li:hover > ul.iq-submenu{opacity: 1; visibility: visible; top: 100%; transition: all 0.45s ease 0s;}
 	.iq-menu-horizontal-tab .iq-sidebar-menu .iq-menu li > ul.iq-submenu#ui-elements { height: 350px; overflow-y: scroll; }
 	.iq-menu-horizontal-tab .iq-sidebar-menu .iq-menu li > ul.iq-submenu ul.iq-submenu-data { left: 130%; top: 0; padding: 0; opacity: 0; visibility: hidden; display: block; transition: all 0.45s ease 0s; }
@@ -104,7 +105,7 @@ NOTE: This file contains the styling for responsive Template.
 	.iq-menu-horizontal-tab .iq-sidebar-menu .iq-menu > li { padding: 10px 0; }
 	.iq-menu-horizontal-tab .iq-sidebar-menu .iq-menu > li > a { border-radius: 4px; padding: 10px 20px; color: #ffffff; transition: all 0.5s ease-out 0s; }
 	.iq-menu-horizontal-tab .iq-sidebar-menu .iq-menu > li:hover > a{color: #0084ff; background: #e5f2ff;transition: all 0.5s ease-out 0s;}
-	body.top-tab-horizontal .iq-top-navbar .top-menu { border-radius: 0; margin-bottom: 0; padding: 0; min-height: 73px; position: fixed; top: 0; left: 0; width: 100%; display: inline-block; z-index: 99; background: #25294a; -webkit-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); -moz-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); }
+	body.top-tab-horizontal .iq-top-navbar .top-menu { border-radius: 0; margin-bottom: 0; padding: 0; min-height: 73px; position: fixed; top: 0; left: 0; width: 100%; display: inline-block; z-index: 99; background: #f2f4ff; -webkit-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); -moz-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); }
 	body.top-tab-horizontal .iq-top-navbar { position: static; box-shadow: none; }
 }
 @media(max-width:1299px) {
@@ -124,10 +125,10 @@ NOTE: This file contains the styling for responsive Template.
 	body.sidebar-main .iq-sidebar-menu .iq-menu li a .iq-arrow-right { display: inline-block; }
 	.iq-email-to-list ul li { margin: 0 2px 0 0; }
 	.an-img-two{    width: 600px;    top: -118px;}
-	.iq-menu-horizontal { position: absolute; left: -100%; right: 0; width: 100%; opacity: 0; top: 100%; width: 260px; background: #25294a; height: 80vh; overflow-y: scroll; overflow-x: hidden; transition: all 0.45s ease 0s; }
+	.iq-menu-horizontal { position: absolute; left: -100%; right: 0; width: 100%; opacity: 0; top: 100%; width: 260px; background: #f7f8ff; height: 80vh; overflow-y: scroll; overflow-x: hidden; transition: all 0.45s ease 0s; }
 	.iq-page-menu-horizontal.sidebar-main .iq-menu-horizontal { opacity: 1; left: 0; transition: all 0.45s ease 0s; }
 	.iq-sidebar-menu .iq-menu { display: block !important; }
-	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li a { padding: 15px 20px 15px 30px; background-color: transparent; }
+	.iq-menu-horizontal .iq-sidebar-menu .iq-menu li a { padding: 15px 20px 15px 30px; }
 	.iq-sidebar-menu .iq-menu li ul { padding-left: 30px; }
 	.iq-sidebar-menu .iq-menu li ul.iq-submenu-data { padding-left: 40px; }
 	.two-sidebar .content-page { margin-left: 60px; }
@@ -135,7 +136,7 @@ NOTE: This file contains the styling for responsive Template.
 	body.two-sidebar.sidebar-main .content-page, body.sidebar-main .iq-footer { margin-left: 60px; }
 	body.two-sidebar.sidebar-main .iq-sidebar { width: 260px; }
 	.two-sidebar .iq-sidebar-logo { width: auto; margin-left: 40px; }
-	.tab-menu-horizontal { position: fixed; z-index: 999; top: 75px; left: -260px; width: 260px; overflow: hidden; height: 100vh; overflow-y: scroll; overflow-x: hidden; background: #202442; transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+	.tab-menu-horizontal { position: fixed; z-index: 999; top: 75px; left: -260px; width: 260px; overflow: hidden; height: 100vh; overflow-y: scroll; overflow-x: hidden; background: #f7f8ff; transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
 	body.top-tab-horizontal.sidebar-main .tab-menu-horizontal{left: 0;}
 	body.top-tab-horizontal .iq-menu-horizontal-tab {width: 100%;}
 	.iq-sidebar.sidebar-dark-blue .iq-sidebar-menu .iq-menu li ul li a{padding-left: 60px;}
@@ -160,8 +161,8 @@ NOTE: This file contains the styling for responsive Template.
 	.display-5 { font-size: 2rem; font-weight: 300; }
 	.display-6 { font-size: 1.5rem; font-weight: 300; }
 	.iq-top-navbar .navbar { position: relative; display: inherit; }
-	.iq-top-navbar .navbar-toggler { right: 85px; top: 18px; position: absolute; color: #ffffff; background: #2d325a; border: none; padding: 7px 10px; border-radius: 5px; font-size: 24px; }
-	.navbar-collapse { position: absolute; top: 75px; left: 0; width: 100%; background: #25294a; -webkit-box-shadow: 0px 5px 12px 0px rgba(55, 73, 72, 0.15); -moz-box-shadow: 0px 5px 12px 0px rgba(55, 73, 72, 0.15); box-shadow: 0px 5px 12px 0px rgba(55, 73, 72, 0.15); }
+	.iq-top-navbar .navbar-toggler { right: 85px; top: 18px; position: absolute; color: #1c67a2; background: #f2f4ff; border: none; padding: 7px 10px; border-radius: 5px; font-size: 24px; box-shadow: 20px 20px 20px rgba(29, 36, 56, 0.05), -20px -20px 20px rgba(255, 255, 255, 0.5), 6px 6px 6px rgba(29, 36, 56, 0.05), -6px -6px 6px rgba(255, 255, 255, 0.5); }
+	.navbar-collapse { position: absolute; top: 75px; left: 0; width: 100%; background: #f2f4ff; box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.07), -20px -20px 20px rgba(255, 255, 255, 0.7), 6px 6px 6px rgba(0, 0, 0, 0.09), -6px -6px 6px rgba(255, 255, 255, 0.9); }
 	.navbar-nav.navbar-list { float: right; display: inline-block; }
 	.iq-top-navbar .iq-navbar-custom .iq-menu-bt { right: 130px; top: 18px; }
 	.animation-card .an-img .bodymovin { margin-bottom: 0; margin-left: 0; width: 100%; }
@@ -175,21 +176,21 @@ NOTE: This file contains the styling for responsive Template.
 	.sign-in-from {padding: 0 20px;}
 	.iq-maintenance .col-lg-4 { margin-bottom: 15px;}
 	.chat-data-left { position: absolute; left: 0; max-width: 320px; top: 0; z-index: 9; background: #fff; transform: translateX(-100%); opacity: 0; transition: all 0.45s ease 0s; box-shadow: 0px 0px 12px 0px rgba(55, 73, 72, 0.06); overflow-y: scroll; height: 100%; }
-	.chat-sidebar-channel{overflow: auto; height: auto;padding-left: 0 !important;}
-	.chat-search {padding-left: 0 !important;}
+	.chat-sidebar-channel { overflow: auto; height: auto; padding-left: 0 !important; }
+	.chat-search { padding-left: 0 !important; }
 	.chat-data-left.show { transform: translateX(0); opacity: 1; transition: all 0.45s ease 0s; }
 	button.close-btn-res { display: block; background: transparent; border: none; font-size: 20px; font-weight: 600; position: absolute; top: 10px; left: auto; right: 0; }
 	.chat-head header { padding-left: 15px; }
-	div#sidebar-toggle{display: block;}
+	div#sidebar-toggle { display: block; }
 	#sidebar-toggle { background: #e5f2ff; padding: 12px 10px; margin-right: 15px; border-radius: 5px; height: 40px; width: 40px; line-height: 17px; text-align: center; color: #0084ff; }
-	#chat-user-detail-popup{overflow-y: scroll;padding-bottom: 20px;}
-	#user-detail-popup{overflow: scroll;}
-	ul.profile-img-gallary li img{width: 100%;}
-	.profile-feed-items li a{margin: 0 5px 0 0;}
-	.profile-left{order: 2;}
-	.profile-center{order: 1;}
-	.profile-right{order: 3;}
-	.iq-edit-profile .nav-link{font-size: 14px;}
+	#chat-user-detail-popup { overflow-y: scroll; padding-bottom: 20px; }
+	#user-detail-popup { overflow: scroll; }
+	ul.profile-img-gallary li img { width: 100%; }
+	.profile-feed-items li a { margin: 0 5px 0 0; }
+	.profile-left { order: 2; }
+	.profile-center { order: 1; }
+	.profile-right { order: 3; }
+	.iq-edit-profile .nav-link { font-size: 14px; }
 	.stepwizard-row .wizard-step a { padding: 20px 15px; margin: 10px 10px; }
 	.top-tab-horizontal .iq-navbar-custom.d-flex {display: block !important;}
 	.iq-page-menu-horizontal .iq-navbar-custom.d-flex {display: block !important;}
@@ -218,13 +219,13 @@ NOTE: This file contains the styling for responsive Template.
 	.sign-in-detail {padding: 50px 20px;}
 	.sign-in-from{padding: 20px;}
 	.iq-error h1{font-size: 12rem;}
-	.user-detail {margin-bottom: 15px;padding-left: 0 !important;}
-	.user-detail .d-flex {display: block !important; text-align: center;}
-	.profile-img{text-align: center; padding-right: 0 !important}
-	.profile-feed-items{width: 100%;justify-content: center;}
-	.iq-edit-profile .nav-link{border: none;}
+	.user-detail { margin-bottom: 15px; padding-left: 0 !important; }
+	.user-detail .d-flex { display: block !important; text-align: center; }
+	.profile-img { text-align: center; padding-right: 0 !important }
+	.profile-feed-items { width: 100%; justify-content: center; }
+	.iq-edit-profile .nav-link { border: none; }
 	.user-list-files.d-flex.float-right { display: block !important; text-align: center; margin-top: 30px; width: 100%; }
-	.table-responsive #exampleInputSearch{width: 100%;}
+	.table-responsive #exampleInputSearch { width: 100%; }
 	.wizard-step { width: 50%; }
 	.Products ul.product_list { text-align: center; }
 	.iq-image-container { text-align: center; }
@@ -252,14 +253,14 @@ NOTE: This file contains the styling for responsive Template.
 	.iq-sidebar-logo a span { display: none; }
 	body.sidebar-main .iq-top-navbar .iq-sidebar-logo a span { opacity: 0; display: none; }
 	.iq-error h1{font-size: 8rem;}
-	.chat-head header{overflow-x: scroll;}
-	#chat-user-detail-popup{width: 300px;}
-	.profile-feed-items{display: block !important;}
-	.profile-feed-items li{margin: 0 0 20px 0;}
-	ul.header-nav li{height: 35px; width: 35px; line-height: 35px; margin: 0 5px 0 0; font-size: 16px;}
-	.comment-area.p-3 > div {display: block !important;}
-	.comment-area.p-3 > div> div {margin-bottom: 10px;}
-	.profile-feed-items li a{text-align: center;}
+	.chat-head header { overflow-x: scroll; }
+	#chat-user-detail-popup { width: 300px; }
+	.profile-feed-items { display: block !important; }
+	.profile-feed-items li { margin: 0 0 20px 0; }
+	ul.header-nav li { height: 35px; width: 35px; line-height: 35px; margin: 0 5px 0 0; font-size: 16px; }
+	.comment-area.p-3 > div { display: block !important; }
+	.comment-area.p-3 > div> div { margin-bottom: 10px; }
+	.profile-feed-items li a { text-align: center; }
 	.wizard-step { width: 100%; }
 }
 @media(max-width:359px) { }

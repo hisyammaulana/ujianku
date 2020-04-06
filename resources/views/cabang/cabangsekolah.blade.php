@@ -1,4 +1,7 @@
-@extends('layouts.master') @section('title', 'Daftar Sekolah') @section('page-title', 'Halaman Daftar Sekolah') @section('content')
+@extends('layouts.master')
+@section('title', 'Daftar Sekolah')
+@section('page-title', 'Halaman Daftar Sekolah')
+@section('content')
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
@@ -18,7 +21,7 @@
                 </div>
                 <div class="iq-card-body">
                     <div class="table-responsive">
-                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <table id="example" class="display responsive nowrap" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>No.</th>
@@ -33,7 +36,7 @@
                             <tbody>
                                 @if (count($sekolahs) === 0)
                                     <tr>
-                                        <td colspan="7" >Data tidak ditemukan</td>
+                                        <td colspan="7" style="text-align: center;" >Data tidak ditemukan</td>
                                     </tr>
                                 @elseif (count($sekolahs) > 0)
                                     @php($no = 1)
@@ -43,9 +46,9 @@
                                         <td>{{ $sekolah->nama_rayon }}</td>
                                         <td>{{ $sekolah->kode_sekolah }}</td>
                                         <td>{{ $sekolah->name }}</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
+                                        <td>{{ $sekolah->npsn }}</td>
+                                        <td>{{ $sekolah->sts_sek }}</td>
+                                        <td>{{ $sekolah->kurikulum }}</td>
                                     </tr>
                                     @endforeach
                                 @endif
